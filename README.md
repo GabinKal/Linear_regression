@@ -1,29 +1,37 @@
 # 🛒 E-Commerce Linear Regression Project
 
 ## 📌 Description
-Ce projet illustre l’utilisation de la **régression linéaire** pour analyser et prédire des comportements d’achat dans un dataset e-commerce.  
-À travers un **notebook Jupyter** (`Linear.ipynb`), on entraîne un modèle de Machine Learning afin de comprendre l’impact de certaines variables (ex : temps passé sur le site, visites de l’app mobile, longueur de la session, etc.) sur le **montant d’achat annuel**.
+Cette application utilise la **régression linéaire** pour prédire le montant d'achat annuel d’un client à partir de ses comportements d’utilisation (site web, application mobile, durée de session, ancienneté).  
+L’interface est développée avec **Streamlit**, permettant une interaction simple et intuitive.
 
 ---
 
 ## 📂 Structure du projet
 
-```Ecommerce-Linear-Regression/
+```Linear_regression/
 │── data/
-│ └── ecommerce.csv # Jeu de données utilisé pour l'analyse
+│ └── ecommerce.csv # Jeu de données utilisé pour l'entraînement
 │
-│── Linear.ipynb # Notebook Jupyter avec l'entraînement et l'analyse
+│── model/
+│ ├── model.pkl # Modèle de régression sauvegardé
+│ └── scaler.pkl # Scaler sauvegardé (normalisation des features)
 │
-│── README.md # Documentation du projet
+│── app/
+│ └── main.py # Application Streamlit
+│
+│── Linear.ipynb # Notebook Jupyter d'entraînement et analyse
 │── requirements.txt # Dépendances Python
+│── README.md # Documentation du projet
 ````
 
+---
+
 ## ⚙️ Fonctionnalités principales
-- 📊 Chargement et exploration du dataset e-commerce  
-- 🔍 Analyse exploratoire des données (EDA)  
-- 📈 Visualisation des corrélations entre variables  
-- 🤖 Modélisation par **régression linéaire** avec scikit-learn  
-- ✅ Évaluation du modèle (MSE, R², etc.)  
+- 📊 Exploration et visualisation du dataset e-commerce  
+- 🤖 Entraînement d’un modèle de **régression linéaire** avec scikit-learn  
+- 📈 Évaluation des performances du modèle (R², MSE)  
+- 🖥️ Interface web interactive avec **Streamlit** pour prédire le montant d’achat annuel  
+- ✅ Gestion des valeurs incohérentes (prédictions négatives corrigées en 0 €)  
 
 ---
 
@@ -33,6 +41,7 @@ Ce projet illustre l’utilisation de la **régression linéaire** pour analyser
 - **Pandas, Numpy** (manipulation des données)  
 - **Matplotlib, Seaborn** (visualisation)  
 - **Scikit-learn** (modélisation et évaluation)  
+- **Streamlit** (interface web)  
 
 ---
 
@@ -40,5 +49,5 @@ Ce projet illustre l’utilisation de la **régression linéaire** pour analyser
 
 1. **Cloner le dépôt**
 ```bash
-git clone https://github.com/ton-username/Ecommerce-Linear-Regression.git
-cd Ecommerce-Linear-Regression
+git clone https://github.com/ton-username/Ecommerce-Spending-Prediction.git
+cd Ecommerce-Spending-Prediction
